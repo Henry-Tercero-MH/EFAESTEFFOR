@@ -1,0 +1,113 @@
+---
+---
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<div class="hero-slider relative">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <div class="relative h-[500px] md:h-[600px] lg:h-[700px] w-full bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/5273042/pexels-photo-5273042.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div class="container mx-auto px-4 relative h-full flex flex-col justify-center items-start text-white">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">Educación Agropecuaria y Forestal</h2>
+            <p class="text-lg md:text-xl max-w-2xl mb-8">Formamos profesionales para el desarrollo sostenible del sector agropecuario y forestal de Guatemala.</p>
+            <div class="flex flex-wrap gap-4">
+              <a href="/programas" class="bg-primary hover:bg-primary-light text-white px-6 py-3 rounded-md font-medium transition-colors duration-300">Conoce nuestros programas</a>
+              <a href="/contacto" class="bg-transparent hover:bg-white/10 text-white border-2 border-white px-6 py-3 rounded-md font-medium transition-colors duration-300">Contáctanos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <div class="relative h-[500px] md:h-[600px] lg:h-[700px] w-full bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/2933265/pexels-photo-2933265.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div class="container mx-auto px-4 relative h-full flex flex-col justify-center items-start text-white">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">Tecnología e Innovación</h2>
+            <p class="text-lg md:text-xl max-w-2xl mb-8">Implementamos tecnologías modernas en el campo agropecuario y forestal con el apoyo de cooperación internacional.</p>
+            <div class="flex flex-wrap gap-4">
+              <a href="/proyectos" class="bg-primary hover:bg-primary-light text-white px-6 py-3 rounded-md font-medium transition-colors duration-300">Ver proyectos</a>
+              <a href="/recursos" class="bg-transparent hover:bg-white/10 text-white border-2 border-white px-6 py-3 rounded-md font-medium transition-colors duration-300">Recursos educativos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <div class="relative h-[500px] md:h-[600px] lg:h-[700px] w-full bg-cover bg-center" style="background-image: url('https://images.pexels.com/photos/2255801/pexels-photo-2255801.jpeg?auto=compress&cs=tinysrgb&w=1600');">
+          <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div class="container mx-auto px-4 relative h-full flex flex-col justify-center items-start text-white">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">Desarrollo Comunitario</h2>
+            <p class="text-lg md:text-xl max-w-2xl mb-8">Trabajamos con las comunidades rurales para fortalecer sus capacidades y mejorar su calidad de vida.</p>
+            <div class="flex flex-wrap gap-4">
+              <a href="/sobre-nosotros" class="bg-primary hover:bg-primary-light text-white px-6 py-3 rounded-md font-medium transition-colors duration-300">Nuestra misión</a>
+              <a href="/noticias" class="bg-transparent hover:bg-white/10 text-white border-2 border-white px-6 py-3 rounded-md font-medium transition-colors duration-300">Últimas noticias</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Navigation buttons -->
+    <div class="swiper-button-next text-white"></div>
+    <div class="swiper-button-prev text-white"></div>
+    
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+  
+  document.addEventListener('astro:page-load', () => {
+    const swiper = new Swiper('.swiper', {
+      modules: [Navigation, Pagination, Autoplay],
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>
+
+<style>
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: white;
+  }
+  
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+  }
+</style>

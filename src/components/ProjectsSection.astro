@@ -1,0 +1,71 @@
+---
+const projects = [
+  {
+    title: 'Modernización de Sistemas de Riego',
+    partner: 'USAID',
+    description: 'Implementación de sistemas de riego por goteo de alta eficiencia para optimizar el uso del agua en la región.',
+    image: 'https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    url: '/proyectos/modernizacion-sistemas-riego'
+  },
+  {
+    title: 'Capacitación en Agricultura Sostenible',
+    partner: 'FAO',
+    description: 'Programa de capacitación en técnicas agroecológicas para agricultores locales, promoviendo prácticas sostenibles.',
+    image: 'https://images.pexels.com/photos/2433467/pexels-photo-2433467.jpeg?auto=compress&cs=tinysrgb&w=1600',
+    url: '/proyectos/capacitacion-agricultura-sostenible'
+  }
+];
+---
+
+<section class="py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-3 text-primary-dark">Proyectos Destacados</h2>
+    <p class="text-center text-neutral-600 max-w-2xl mx-auto mb-12">Colaboramos con organizaciones internacionales para implementar proyectos que benefician a las comunidades rurales.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {projects.map(project => (
+        <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-2/5">
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="md:w-3/5 p-6">
+              <div class="flex items-center mb-3">
+                <span class="bg-accent-light text-accent-dark text-xs font-medium px-2.5 py-0.5 rounded">
+                  En colaboración con {project.partner}
+                </span>
+              </div>
+              <h3 class="text-xl font-bold mb-2 text-primary-dark">{project.title}</h3>
+              <p class="text-neutral-600 mb-4">{project.description}</p>
+              <a 
+                href={project.url} 
+                class="inline-flex items-center text-primary font-medium hover:text-primary-light"
+              >
+                Ver detalles del proyecto
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+    
+    <div class="text-center mt-12">
+      <a 
+        href="/proyectos" 
+        class="inline-flex items-center bg-primary hover:bg-primary-light text-white font-medium py-3 px-6 rounded-md transition-colors duration-300"
+      >
+        Ver todos los proyectos
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Página no encontrada">
+  <section class="py-16 min-h-[70vh] flex items-center">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-6xl font-bold text-primary mb-4">404</h1>
+      <h2 class="text-3xl font-semibold mb-6 text-neutral-800">¡Página no encontrada!</h2>
+      <p class="text-lg text-neutral-600 mb-8 max-w-lg mx-auto">
+        Lo sentimos, la página que estás buscando no existe o ha sido movida.
+      </p>
+      <div>
+        <a 
+          href="/" 
+          class="bg-primary hover:bg-primary-light text-white font-medium py-3 px-6 rounded-md transition-colors duration-300 inline-flex items-center"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
+          </svg>
+          Volver a la página de inicio
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
